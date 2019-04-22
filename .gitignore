@@ -9,10 +9,12 @@
 data/
 
 *.csv
+*.xlsx
+.vscode
 
 \.env
 
 \.DS_Store
 
-
+references
 notebooks/\.ipynb_checkpoints/
