@@ -1,11 +1,13 @@
+#%%
 import bluesquare_data_pipelines.access as blsq
 import pandas as pd
 
+#%%
 # Connect to HIVDR
 hivdr = blsq.dhis_instance("dhis2_cd_hivdr_prod")
-
+#%%
 # Load IAP data
-iap_data = pd.read_excel("IAP_RDC_2010_2016_final.xlsx", sheet_name = "2010_2016")
+iap_data = pd.read_excel("data/IAP_RDC_2010_2016_final.xlsx", sheet_name = "2010_2016")
 iap_data.columns = ["province", "fosa", "annee", "on_time_refill" ,"M12_retention", "no_rupture_months", 
                     "good_lines", "viral_load_suppressed", "on_time_visit", "M12_pdv"]
 
