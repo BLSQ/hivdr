@@ -14,7 +14,7 @@ des = hivdr.dataelement.uid.unique().tolist()
 #%%
 for i in range(int(np.ceil(len(fosas)/100))):
     fosa_i = fosas[100*i:min(100*i + 99, len(fosas))]
-    data = hivdr.get_data(des, fosa_i, 2017, comment="Extraction for Jenny")
+    data = hivdr.get_data(des, fosa_i, 2018, comment="Extraction for Jenny")
     print("writing bach " + str(i))
     with open('extract_2018.csv', 'a') as f:
         data.to_csv(f, header=False)
